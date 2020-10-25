@@ -1,8 +1,10 @@
 pipeline {
-	agent { label: 'node-docker-slave' }
+	agent { label'node-docker-slave' }
 	stages {
 		stage("Hello") {
-			sh "echo helo"
+			steps {
+				sh "echo helo"
+			}
 		}
 	}
 }
