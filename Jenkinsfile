@@ -23,5 +23,10 @@ pipeline {
         }
       }
     }
+    stage("Docker push") {
+      steps {
+        sh "docker push osiris65/vuejs-nodejs-example:latest"
+      }
+    }
   }
 }
