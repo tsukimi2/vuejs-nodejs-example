@@ -13,7 +13,7 @@ pipeline {
     }
     stage("Docker build") {
       steps {
-        sh "docker container ps"
+        sh "docker build -t osiris65/vuejs-nodejs-example:latest ."
       }
     }
   }
