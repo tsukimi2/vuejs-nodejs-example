@@ -1,10 +1,10 @@
 pipeline {
-  agent { label 'node-docker-slave' }
+  agent { label'node-docker-slave' }
   stages {
-    stage("Hello") {
+    stage("Build") {
       steps {
-        sh "echo helo"
+        sh "cd api; ls -la"
       }
     }
-  }   
+  }
 }
