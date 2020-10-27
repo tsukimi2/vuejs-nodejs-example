@@ -3,12 +3,12 @@ pipeline {
   stages {
     stage("Build API") {
       steps {
-        sh "cd api && ls -la && cd .."
+        sh "cd api && npm install && cd .."
       }
     }
     stage("Build UI") {
       steps {
-        sh "cd my-app && ls -la"
+        sh "cd my-app && npm install && cd .."
       }
     }
   }
