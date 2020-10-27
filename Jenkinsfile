@@ -11,5 +11,10 @@ pipeline {
         sh "cd my-app && npm install && cd .."
       }
     }
+    stage("Docker build") {
+      steps {
+        sh "docker container ps"
+      }
+    }
   }
 }
